@@ -1,0 +1,90 @@
+npx create-expo-app CalculatorApp
+cd CalculatorApp
+
+npx expo start
+a 
+RR
+npx expo start --port=8084
+npx expo start --android 
+
+--------------------------------------------
+Reload : RR tuşuna basmak
+
+--------------------------------------------
+NPM
+// Router
+npm install @react-navigation/native @react-navigation/native-stack
+npx expo install react-native-screens react-native-safe-area-context
+
+// node_modules deleted => npm install
+
+###########################################
+###########################################
+// BUTTON AND TEXT
+Farid FArJat
+// flex-start:sol
+// flex-end: sağ
+// center
+flex: 1,
+alignItems: 'center',     // satır düzleminde (X)
+justifyContent: 'center', // sutun düzleminde (Y)
+
+  container: {
+    // flex-start:sol
+    // flex-end: sağ
+    // center
+    flex: 1,
+    alignItems: 'center',     // satır düzleminde (X)
+    justifyContent: 'center', // sutun düzleminde (Y)
+    backgroundColor: '#000',
+
+  },
+
+    justView:{
+      color: "blue",
+      fontSize: 20,
+      marginTop: 12,
+    }
+
+  buttonStyle: {
+    backgroundColor: 'white',
+    borderRadius: 10.5,
+    padding: 15,
+    justifyContent: 'center',
+    alignItems: "center",
+  },
+
+  buttonTextStyle: {
+    color: 'black',
+    lineHeight: 25,
+    fontSize: 15,
+    letterSpacing: 0.5,
+    fontWeight : 'bold',
+  },
+
+###########################################
+
+// CREATE
+// Create Native Stack
+const Stack = createNativeStackNavigator();
+
+//FUNCTION
+// 1.YOL
+// const App = () => { }
+// 2.YOL
+ function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+       <Stack.Screen name="MyProfile" component={ProfileScreen} options={{ title: "Profile Alanı" }} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+// SAYFALAR
+// ProfileScreen
+const ProfileScreen = ({ navigation,route }) => {
+  return <Text> Profilime sayfama Hoş geldiniz {route.params.name}  </Text>
+}
+###########################################
