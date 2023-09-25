@@ -102,9 +102,9 @@ class ClassCalculator extends Component {
       <View style={styles.container}>
         <Text>Merhabalar</Text>
       </View>
-    )
-  }
-}
+    ) //end return
+  } //end render
+} //end class
 
 
 // CSS
