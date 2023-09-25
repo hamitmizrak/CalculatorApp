@@ -16,10 +16,9 @@ import ClassCalculator from './src/ClassCalculator';
 const Stack = createNativeStackNavigator();
 
 //FUNCTION
-// 1.YOL
-// const App = () => { }
-// 2.YOL
- function App() {
+// 1.YOL   const App = () => { }
+// 2.YOL   function App() {}
+const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
