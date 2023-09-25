@@ -20,28 +20,78 @@ class ClassCalculator extends Component {
       result: ""
     }
     // BIND
-    this.calculatorSum=this.calculatorSum.bind(this);
-    this.calculatorReduce=this.calculatorReduce.bind(this);
-    this.calculatorMultiple=this.calculatorMultiple.bind(this);
-    this.calculatorDivide=this.calculatorDivide.bind(this);
-    this.calculatorMod=this.calculatorMod.bind(this);
+    this.calculatorSum = this.calculatorSum.bind(this);
+    this.calculatorReduce = this.calculatorReduce.bind(this);
+    this.calculatorMultiple = this.calculatorMultiple.bind(this);
+    this.calculatorDivide = this.calculatorDivide.bind(this);
+    this.calculatorMod = this.calculatorMod.bind(this);
   }
 
 
   // TOPLAMA
-  calculatorSum() { }
+  calculatorSum() {
+    const inputValue1 = 0, inputValue2 = 0, resultValue = 0;
+    inputValue1 = parseFloat(this.state.inputData1);
+    inputValue2 = parseFloat(this.state.inputData2);
+    resultValue = (inputValue1 + inputValue2);
+
+    // SETSTATE
+    this.setState({
+      result: resultValue,
+    });
+  }
 
   // ÇIKARMA
-  calculatorReduce() { }
+  calculatorReduce() {
+    const inputValue1 = 0, inputValue2 = 0, resultValue = 0;
+    inputValue1 = parseFloat(this.state.inputData1);
+    inputValue2 = parseFloat(this.state.inputData2);
+    resultValue = (inputValue1 - inputValue2);
+
+    // SETSTATE
+    this.setState({
+      result: resultValue,
+    });
+  }
 
   // ÇARMA
-  calculatorMultiple() { }
+  calculatorMultiple() {
+    const inputValue1 = 0, inputValue2 = 0, resultValue = 0;
+    inputValue1 = parseFloat(this.state.inputData1);
+    inputValue2 = parseFloat(this.state.inputData2);
+    resultValue = (inputValue1 * inputValue2);
+
+    // SETSTATE
+    this.setState({
+      result: resultValue,
+    })
+  }
 
   // BÖLME
-  calculatorDivide() { }
+  calculatorDivide() {
+    const inputValue1 = 0, inputValue2 = 0, resultValue = 0;
+    inputValue1 = parseFloat(this.state.inputData1);
+    inputValue2 = parseFloat(this.state.inputData2);
+    resultValue=(inputValue1/inputValue2);
+
+    // SETSTATE
+    this.setState({
+      result: resultValue,
+    });
+   }
 
   // KALAN
-  calculatorMod() { }
+  calculatorMod() {
+      const inputValue1 = 0, inputValue2 = 0, resultValue = 0;
+      inputValue1 = parseFloat(this.state.inputData1);
+      inputValue2 = parseFloat(this.state.inputData2);
+      resultValue =(inputValue1%inputValue2);
+
+      // SETSTATE
+      this.setState({
+        result:resultValue,
+      })
+  }
 
 
   // RENDER
