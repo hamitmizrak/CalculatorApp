@@ -5,6 +5,6 @@ export default function FunctionCalculator() {
   return (
     <View>
         <Text>Function Calculator</Text>
-        </View>
+    </View>
   )
 }

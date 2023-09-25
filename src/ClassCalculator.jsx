@@ -19,6 +19,7 @@ class ClassCalculator extends Component {
       inputData1: "",
       inputData2: "",
       result: "",
+      allResult: [],
       date: new Date().getFullYear(), // "25/09/2023",
     }
     // BIND
@@ -40,6 +41,7 @@ class ClassCalculator extends Component {
     // SETSTATE
     this.setState({
       result: resultValue,
+      allResult:[resultValue+" ",...this.state.allResult],
     });
   }
 
@@ -53,6 +55,7 @@ class ClassCalculator extends Component {
     // SETSTATE
     this.setState({
       result: resultValue,
+      allResult:[resultValue+" ",...this.state.allResult],
     });
   }
 
@@ -66,6 +69,7 @@ class ClassCalculator extends Component {
     // SETSTATE
     this.setState({
       result: resultValue,
+      allResult:[resultValue+" ",...this.state.allResult],
     })
   }
 
@@ -78,7 +82,8 @@ class ClassCalculator extends Component {
 
     // SETSTATE
     this.setState({
-      result: "2025",
+      result:resultValue,
+      allResult:[resultValue+" ",...this.state.allResult],
     });
   }
 
@@ -91,7 +96,8 @@ class ClassCalculator extends Component {
 
     // SETSTATE
     this.setState({
-      result: resultValue,
+      result:resultValue,
+      allResult:[resultValue+" ",...this.state.allResult],
     })
   }
 
@@ -185,6 +191,7 @@ class ClassCalculator extends Component {
             title="%"
           />
           <Text style={styles.calculatorResultText}>Sonuç: {this.state.result}</Text>
+          <Text style={styles.calculatorResultText}>Hepsi: {this.state.allResult.map((item)=><Text>{item}</Text>).reverse()}</Text>
         </View>
       </View>
     ) //end return
@@ -206,7 +213,6 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: 'center',
-
   },
   calculatorButton: {
     borderRadius: 5,
