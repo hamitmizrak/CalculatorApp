@@ -13,17 +13,17 @@ export default class CalculatorHeader extends Component {
     // BIND
   }
 
-
   // RENDER
   render() {
     // destructing object
-    const {headerTextData,appVersion}=this.props
+    const {headerTextData,appVersion,nowDateData}=this.props
 
     // RETURN
     return (
       <View>
         {/* {this.props.headerTextData} */}
-        <Text>{headerTextData} - {appVersion}</Text>
+        <Text>{headerTextData} # {appVersion}</Text>
+        <Text>{nowDateData}</Text>
         </View>
     )
   }
