@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import MyHeader from './MyHeader';
+import CalculatorHeader from './CalculatorHeader';
 
 // Class Component
 class ClassCalculator extends Component {
@@ -26,7 +27,6 @@ class ClassCalculator extends Component {
     this.calculatorDivide = this.calculatorDivide.bind(this);
     this.calculatorMod = this.calculatorMod.bind(this);
   }
-
 
   // TOPLAMA
   calculatorSum() {
@@ -100,7 +100,13 @@ class ClassCalculator extends Component {
     // RETURN
     return (
       <View style={styles.container}>
-        <Text>Merhabalar</Text>
+        {/* other Component import */}
+         <CalculatorHeader headerTextData="Hesap Makine Uygulaması" appVersion="version-1"  />
+
+        <View>
+           <Text>Merhabalar</Text>
+        </View>
+       
       </View>
     ) //end return
   } //end render
