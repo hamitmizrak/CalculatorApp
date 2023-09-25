@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 
 // REACT NATIVE
 import { StyleSheet, Text, View } from 'react-native'
-import { Header } from 'react-native/Libraries/NewAppScreen';
-import MyHeader from './MyHeader';
+
+// Header
 import CalculatorHeader from './CalculatorHeader';
 
 // Class Component
