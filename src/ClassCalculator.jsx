@@ -13,10 +13,35 @@ class ClassCalculator extends Component {
   constructor(props) {
     super(props);
 
+    // STATE
     this.state = {
-
+      inputData1: "",
+      inputData2: "",
+      result: ""
     }
+    // BIND
+    this.calculatorSum=this.calculatorSum.bind(this);
+    this.calculatorReduce=this.calculatorReduce.bind(this);
+    this.calculatorMultiple=this.calculatorMultiple.bind(this);
+    this.calculatorDivide=this.calculatorDivide.bind(this);
+    this.calculatorMod=this.calculatorMod.bind(this);
   }
+
+
+  // TOPLAMA
+  calculatorSum() { }
+
+  // ÇIKARMA
+  calculatorReduce() { }
+
+  // ÇARMA
+  calculatorMultiple() { }
+
+  // BÖLME
+  calculatorDivide() { }
+
+  // KALAN
+  calculatorMod() { }
 
 
   // RENDER
@@ -25,7 +50,7 @@ class ClassCalculator extends Component {
     // RETURN
     return (
       <View style={styles.container}>
-          <Text>Merhabalar</Text>
+        <Text>Merhabalar</Text>
       </View>
     )
   }
