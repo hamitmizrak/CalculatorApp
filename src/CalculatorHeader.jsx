@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
 // CLASS COMPONENT
 export default class CalculatorHeader extends Component {
@@ -20,7 +20,7 @@ export default class CalculatorHeader extends Component {
 
     // RETURN
     return (
-      <View>
+      <View style={styles.container}>
         {/* {this.props.headerTextData} */}
         <Text>{headerTextData} # {appVersion}</Text>
         <Text>{nowDateData}</Text>
@@ -28,3 +28,14 @@ export default class CalculatorHeader extends Component {
     )
   }
 }
+
+// CSS
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+     alignItems: 'center',     // satır düzleminde (X)
+     justifyContent: 'center', // sutun düzleminde (Y)
+     flexDirection: 'column'
+  },
+});
+
