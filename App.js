@@ -8,8 +8,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Button, StyleSheet, Text, View } from 'react-native';
 
 // Function Calculator
-import FunctionCalculator from './src/ClassCalculator';
+
 import ClassCalculator from './src/ClassCalculator';
+import FunctionCalculator from './src/FunctionCalculator';
 
 // CREATE
 // Create Native Stack
@@ -46,7 +47,8 @@ const HomeScreen = ({ navigation,route }) => {
       {/* Function Calculator */}
       <Button
         title='Calculator Function'
-        onPress={() => navigation.navigate('FunctionCalculator', { name: 'Class Component Calculator' })} />
+        color="blue"
+        onPress={() => navigation.navigate('FunctionCalculator', { name: 'Function Component Calculator' })} />
 
     </View> // common View
   ); //end return 
