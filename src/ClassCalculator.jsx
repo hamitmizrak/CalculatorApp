@@ -19,9 +19,10 @@ class ClassCalculator extends Component {
       inputData1: "",
       inputData2: "",
       result: "",
-      allResult: [],
+      allResult:[],
       date: new Date().getFullYear(), // "25/09/2023",
     }
+
     // BIND
     this.calculatorSum = this.calculatorSum.bind(this);
     this.calculatorReduce = this.calculatorReduce.bind(this);
@@ -41,7 +42,7 @@ class ClassCalculator extends Component {
     // SETSTATE
     this.setState({
       result: resultValue,
-      allResult:[resultValue+" ",...this.state.allResult],
+      allResult:[resultValue+" ",...this.state.allResult]
     });
   }
 
@@ -55,7 +56,7 @@ class ClassCalculator extends Component {
     // SETSTATE
     this.setState({
       result: resultValue,
-      allResult:[resultValue+" ",...this.state.allResult],
+      allResult:[resultValue+" ",...this.state.allResult]
     });
   }
 
@@ -69,7 +70,7 @@ class ClassCalculator extends Component {
     // SETSTATE
     this.setState({
       result: resultValue,
-      allResult:[resultValue+" ",...this.state.allResult],
+      allResult:[resultValue+" ",...this.state.allResult]
     })
   }
 
@@ -83,7 +84,7 @@ class ClassCalculator extends Component {
     // SETSTATE
     this.setState({
       result:resultValue,
-      allResult:[resultValue+" ",...this.state.allResult],
+      allResult:[resultValue+" ",...this.state.allResult]
     });
   }
 
@@ -97,7 +98,7 @@ class ClassCalculator extends Component {
     // SETSTATE
     this.setState({
       result:resultValue,
-      allResult:[resultValue+" ",...this.state.allResult],
+      allResult:[resultValue+" ",...this.state.allResult]
     })
   }
 
@@ -127,7 +128,11 @@ class ClassCalculator extends Component {
       <View style={styles.container}>
         {/*Dikkat: birden fazla Component import ediyorsanız View içinde eklemeyi unutmayınız.*/}
         {/* other Component import */}
-        <CalculatorHeader headerTextData="Hesap Makine Uygulaması" appVersion="version-1" nowDateData={this.state.date} />
+        <CalculatorHeader 
+        headerTextData="Hesap Makine Uygulaması" 
+        appVersion="version-1" 
+        nowDateData={this.state.date} 
+        />
 
         <View style={styles.calculatorContainer}>
           {/* <Text>Merhabalar</Text> */}
@@ -191,7 +196,8 @@ class ClassCalculator extends Component {
             title="%"
           />
           <Text style={styles.calculatorResultText}>Sonuç: {this.state.result}</Text>
-          <Text style={styles.calculatorResultText}>Hepsi: {this.state.allResult.map((item)=><Text>{item}</Text>).reverse()}</Text>
+          <Text style={styles.calculatorResultText}>Hepsi (ilk): {this.state.allResult} </Text>
+          <Text style={styles.calculatorResultText}>Hepsi (son): {this.state.allResult.map((item)=><Text>{item}</Text>).reverse()} </Text>
         </View>
       </View>
     ) //end return
@@ -232,7 +238,6 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginTop: 20
   }
-
 });
 
 // EXPORT
