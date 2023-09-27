@@ -162,7 +162,6 @@ function FunctionCalculator() {
   ) //end return
 }
 
-
 // CSS
 const styles = StyleSheet.create({
   container: {
